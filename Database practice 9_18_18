@@ -1,0 +1,396 @@
+Enter password: ******
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 8
+Server version: 8.0.12 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2018, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> create table CUSTOMER
+    -> CUS_CODE int,
+    -> CUS_LNAME varchar(15),
+    -> CUS_FNAME varchar(15),
+    -> CUS_INITIAL varchar(1),
+    -> CUS_AREACODE varchar(3),
+    -> CUS_CODE varchar(8),
+    -> clr
+    -> \c
+mysql> show tables
+    ->
+    ->
+    -> show tables;
+ERROR 1046 (3D000): No database selected
+mysql> show databases
+    -> show databases;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'show databases' at line 2
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| sakila             |
+| sys                |
+| world              |
++--------------------+
+6 rows in set (0.02 sec)
+
+mysql> create database sale;
+Query OK, 1 row affected (0.12 sec)
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| sakila             |
+| sale               |
+| sys                |
+| world              |
++--------------------+
+7 rows in set (0.00 sec)
+
+mysql> use sale;
+Database changed
+mysql> show tables
+    -> clr
+    -> \c
+mysql> show tables;
+Empty set (0.01 sec)
+
+mysql> create table CUSTOMER (
+    -> CUS_CODE int,
+    -> CUS_LNAME varchar(15),
+    -> CUS_FNAME varchar(15),
+    -> CUS_INITIAL varchar(1),
+    -> CUS_AREACODE varchar(3),
+    -> CUS_PHONE varchar(8),
+    -> CUS_BALANCE decimal(8,2)
+    -> );
+Query OK, 0 rows affected (0.12 sec)
+
+mysql> show tables
+    -> \c
+mysql> show tables;
++----------------+
+| Tables_in_sale |
++----------------+
+| customer       |
++----------------+
+1 row in set (0.00 sec)
+
+mysql> describe customer;
++--------------+--------------+------+-----+---------+-------+
+| Field        | Type         | Null | Key | Default | Extra |
++--------------+--------------+------+-----+---------+-------+
+| CUS_CODE     | int(11)      | YES  |     | NULL    |       |
+| CUS_LNAME    | varchar(15)  | YES  |     | NULL    |       |
+| CUS_FNAME    | varchar(15)  | YES  |     | NULL    |       |
+| CUS_INITIAL  | varchar(1)   | YES  |     | NULL    |       |
+| CUS_AREACODE | varchar(3)   | YES  |     | NULL    |       |
+| CUS_PHONE    | varchar(8)   | YES  |     | NULL    |       |
+| CUS_BALANCE  | decimal(8,2) | YES  |     | NULL    |       |
++--------------+--------------+------+-----+---------+-------+
+7 rows in set (0.01 sec)
+
+mysql> create table VENDOR (
+    -> V_CODE INT PRIMARY KEY,
+    -> V_NAME VARCHAR(35),
+    -> v_CONTACT VARCHAR(25),
+    -> V_AREACODE CHAR(3)\C
+ERROR:
+Usage: \C charset_name | charset charset_name
+    -> \C
+ERROR:
+Usage: \C charset_name | charset charset_name
+    -> \c
+mysql> SHOW TABLES
+    -> \c
+mysql> SHOW TABLES;
++----------------+
+| Tables_in_sale |
++----------------+
+| customer       |
++----------------+
+1 row in set (0.00 sec)
+
+mysql> CREATE TABLE VENDOR (
+    -> V_CODE INT PRIMARY KEY,
+    -> V_NAME VARCHAR (35),
+    -> V_CONTACT VARCHAR (25),
+    -> V_AREACODE CHAR (3),
+    -> V_PHONE CHAR (8),
+    -> V_STATE CHAR (2),
+    -> V_ORDER CHAR (1)
+    -> );
+Query OK, 0 rows affected (0.11 sec)
+
+mysql> SHOW TABLES;
++----------------+
+| Tables_in_sale |
++----------------+
+| customer       |
+| vendor         |
++----------------+
+2 rows in set (0.00 sec)
+
+mysql> DESCRIBE VENDER;
+ERROR 1146 (42S02): Table 'sale.vender' doesn't exist
+mysql> DESCRIBER VENDOR;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'DESCRIBER VENDOR' at line 1
+mysql> DESCRIBE VENDOR;
++------------+-------------+------+-----+---------+-------+
+| Field      | Type        | Null | Key | Default | Extra |
++------------+-------------+------+-----+---------+-------+
+| V_CODE     | int(11)     | NO   | PRI | NULL    |       |
+| V_NAME     | varchar(35) | YES  |     | NULL    |       |
+| V_CONTACT  | varchar(25) | YES  |     | NULL    |       |
+| V_AREACODE | char(3)     | YES  |     | NULL    |       |
+| V_PHONE    | char(8)     | YES  |     | NULL    |       |
+| V_STATE    | char(2)     | YES  |     | NULL    |       |
+| V_ORDER    | char(1)     | YES  |     | NULL    |       |
++------------+-------------+------+-----+---------+-------+
+7 rows in set (0.00 sec)
+
+mysql> alter table customer
+    -> ADD PRIMARY KEY (CUS_CODE)
+    -> ;
+Query OK, 0 rows affected (0.17 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> describe table customer
+    -> ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'table customer' at line 1
+mysql> describe customer;
++--------------+--------------+------+-----+---------+-------+
+| Field        | Type         | Null | Key | Default | Extra |
++--------------+--------------+------+-----+---------+-------+
+| CUS_CODE     | int(11)      | NO   | PRI | NULL    |       |
+| CUS_LNAME    | varchar(15)  | YES  |     | NULL    |       |
+| CUS_FNAME    | varchar(15)  | YES  |     | NULL    |       |
+| CUS_INITIAL  | varchar(1)   | YES  |     | NULL    |       |
+| CUS_AREACODE | varchar(3)   | YES  |     | NULL    |       |
+| CUS_PHONE    | varchar(8)   | YES  |     | NULL    |       |
+| CUS_BALANCE  | decimal(8,2) | YES  |     | NULL    |       |
++--------------+--------------+------+-----+---------+-------+
+7 rows in set (0.01 sec)
+
+mysql> create table PRODUCT (
+    -> P_CODE VARCHAR (10),
+    -> P_DESCRIPT VARCHAR(35),
+    -> \C
+ERROR:
+Usage: \C charset_name | charset charset_name
+    -> \c
+mysql> SOURCE SALE_DATA;
+ERROR:
+Failed to open file 'SALE_DATA', error: 2
+mysql> SHOW TABLES;
++----------------+
+| Tables_in_sale |
++----------------+
+| customer       |
+| vendor         |
++----------------+
+2 rows in set (0.00 sec)
+
+mysql> SOURCE sale_data.sql;
+ERROR:
+Failed to open file 'sale_data.sql', error: 2
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| sakila             |
+| sale               |
+| sys                |
+| world              |
++--------------------+
+7 rows in set (0.00 sec)
+
+mysql> use sale;
+Database changed
+mysql> show tables;
++----------------+
+| Tables_in_sale |
++----------------+
+| customer       |
+| vendor         |
++----------------+
+2 rows in set (0.00 sec)
+
+mysql> create product;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'product' at line 1
+mysql> create table product;
+ERROR 1113 (42000): A table must have at least 1 column
+mysql> create table product (
+    -> P_CODE int,
+    -> P_DESC varchar(30),
+    -> FOREIGN KEY (V_CODE),
+    -> PRIMARY KEY (P_CODE),
+    -> UNIQUE (P_CODE),
+    -> P_PRICE DECIMAL (8,2),
+    -> P_QUANTITY INT,
+    -> V_CODE INT,
+    -> REFERENCES VENDOR (V_CODE),
+    -> P_MIN INT
+    -> );
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ',
+PRIMARY KEY (P_CODE),
+UNIQUE (P_CODE),
+P_PRICE DECIMAL (8,2),
+P_QUANTITY INT,
+' at line 4
+mysql> SHOW TABLES
+    -> SHOW TABLES;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'SHOW TABLES' at line 2
+mysql> SHOW TABLES;
++----------------+
+| Tables_in_sale |
++----------------+
+| customer       |
+| vendor         |
++----------------+
+2 rows in set (0.00 sec)
+
+mysql> create table product (
+    ->     -> P_CODE int,
+    ->     -> P_DESC varchar(30),
+    ->     -> FOREIGN KEY (V_CODE),
+    ->     -> PRIMARY KEY (P_CODE),
+    ->     -> UNIQUE (P_CODE),
+    ->     -> P_PRICE DECIMAL (8,2),
+    ->     -> P_QUANTITY INT,
+    ->     -> V_CODE INT,
+    ->     -> REFERENCES VENDOR (V_CODE),
+    ->     -> P_MIN INT
+    -> \c
+mysql> create table product (    P_CODE int,    P_DESC varchar(30),    FOREIGN KEY (V_CODE),    PRIMARY KEY (P_CODE),    UNIQUE (P_CODE),    P_PRICE DECIMAL (8,2),    P_QUANTITY int,    V_CODE int,    REFERENCES VENDOR (V_CODE),    P_MIN int\c    );
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
+mysql> \c
+mysql> create table product (
+    -> P_CODE int,
+    -> P_DESC varchar(30),
+    -> V_CODE int,
+    -> P_QUANTITY int
+    -> );
+Query OK, 0 rows affected (0.14 sec)
+
+mysql> show product
+    -> \c
+mysql> show product;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'product' at line 1
+mysql> show table product;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'product' at line 1
+mysql> describe product;
++------------+-------------+------+-----+---------+-------+
+| Field      | Type        | Null | Key | Default | Extra |
++------------+-------------+------+-----+---------+-------+
+| P_CODE     | int(11)     | YES  |     | NULL    |       |
+| P_DESC     | varchar(30) | YES  |     | NULL    |       |
+| V_CODE     | int(11)     | YES  |     | NULL    |       |
+| P_QUANTITY | int(11)     | YES  |     | NULL    |       |
++------------+-------------+------+-----+---------+-------+
+4 rows in set (0.00 sec)
+
+mysql> alter table product
+    -> ADD PRIMARY KEY (P_CODE)
+    -> ADD FOREIGN KEY (V_CODE)
+    -> ADD REFERENCES VENDOR (V_CODE)
+    -> ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ADD FOREIGN KEY (V_CODE)
+ADD REFERENCES VENDOR (V_CODE)' at line 3
+mysql> ALTER TABLE PRODUCT
+    -> ADD PRIMARY KEY(P_CODE)
+    -> ;
+Query OK, 0 rows affected (0.15 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> DESCRIBE PRODUCT
+    -> \C
+ERROR:
+Usage: \C charset_name | charset charset_name
+    -> \c
+mysql> DESCRIBE PRODUCT
+    -> \c
+mysql> DESCRIBE PRODUCT;
++------------+-------------+------+-----+---------+-------+
+| Field      | Type        | Null | Key | Default | Extra |
++------------+-------------+------+-----+---------+-------+
+| P_CODE     | int(11)     | NO   | PRI | NULL    |       |
+| P_DESC     | varchar(30) | YES  |     | NULL    |       |
+| V_CODE     | int(11)     | YES  |     | NULL    |       |
+| P_QUANTITY | int(11)     | YES  |     | NULL    |       |
++------------+-------------+------+-----+---------+-------+
+4 rows in set (0.00 sec)
+
+mysql> ALTER TABLE PRODUCT
+    -> ADD FOREIGN KEY(V_CODE)
+    -> ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 2
+mysql> ALTER TABLE PRODUCT
+    -> ADD FOREIGN KEY (V_CODE)
+    -> REFERENCES VENDOR (V_CODE)
+    -> ;
+Query OK, 0 rows affected (0.21 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> DESCRIBE PRODUCT;
++------------+-------------+------+-----+---------+-------+
+| Field      | Type        | Null | Key | Default | Extra |
++------------+-------------+------+-----+---------+-------+
+| P_CODE     | int(11)     | NO   | PRI | NULL    |       |
+| P_DESC     | varchar(30) | YES  |     | NULL    |       |
+| V_CODE     | int(11)     | YES  | MUL | NULL    |       |
+| P_QUANTITY | int(11)     | YES  |     | NULL    |       |
++------------+-------------+------+-----+---------+-------+
+4 rows in set (0.01 sec)
+
+mysql> DESCRIBE TABLE VENDOR
+    -> \c
+mysql> DESCRIBE TABLE VENDOR;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'TABLE VENDOR' at line 1
+mysql> DESCRIBE VENDOR;
++------------+-------------+------+-----+---------+-------+
+| Field      | Type        | Null | Key | Default | Extra |
++------------+-------------+------+-----+---------+-------+
+| V_CODE     | int(11)     | NO   | PRI | NULL    |       |
+| V_NAME     | varchar(35) | YES  |     | NULL    |       |
+| V_CONTACT  | varchar(25) | YES  |     | NULL    |       |
+| V_AREACODE | char(3)     | YES  |     | NULL    |       |
+| V_PHONE    | char(8)     | YES  |     | NULL    |       |
+| V_STATE    | char(2)     | YES  |     | NULL    |       |
+| V_ORDER    | char(1)     | YES  |     | NULL    |       |
++------------+-------------+------+-----+---------+-------+
+7 rows in set (0.01 sec)
+
+mysql> ALTER TABLE PRODUCT
+    -> ADD P_PRICE DECIMAL (8,2)
+    -> ;
+Query OK, 0 rows affected (0.13 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> ALTER TABLE PRODUCT
+    -> ADD UNQIUE (P_CODE)
+    -> ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '(P_CODE)' at line 2
+mysql> ALTER TABLE PRODUCT
+    -> ADD UNQIUE (P_CODE,V_CODE)
+    -> ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '(P_CODE,V_CODE)' at line 2
+mysql> alter table product
+    -> add unique (P_CODE)
+    -> ;
+Query OK, 0 rows affected (0.08 sec)
+Records: 0  Duplicates: 0  Warnings: 0
