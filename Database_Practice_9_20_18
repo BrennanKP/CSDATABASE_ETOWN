@@ -18,75 +18,7 @@ mysql> create table customer (
 mysql> show tables;
 Empty set (0.00 sec)
 
-mysql> create table customer(
-    -> cus_code int primary key,
-    -> cus_lname varchar (15) not null,
-    -> cus_fname varchar (15) not null,
-    -> cus_initial varchar(1),
-    -> cus_areacode varchar(3) default '615' not null,
-    -> cus_phone varchar (8) not null,
-    -> cus_balance decimal (8,2) default 0.00,
-    -> check(cus_areacode in ('615, '713, '913)),
-    '> check(cus_areacode in ('615, '713, '913')),
-    '> ^C
-mysql> create table customer(
-    -> create table customer (
-    -> cus_code int primary key,
-    -> cus_lname varchar (15) not null,
-    -> cus_fname varchar (15) not null,
-    -> cus_initial varchar(1),
-    -> cus_areacode varchar(3) default '615' not null,
-    -> cus_phone varchar (8) not null,
-    -> cus_balance decimal (8,2) default 0.00,
-    -> check(cus_areacode in ('615, '713, '913')),
-    -> unique (cus_lname, cus_fname)
-    -> );
-ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'create table customer (
-cus_code int primary key,
-cus_lname varchar (15) not nul' at line 2
-mysql> create table customer (
-    -> primary key cus_code int,
-    -> cus_lname varchar (15) not null,
-    -> cus_fname varchar (15) not null,
-    -> cus_initial varchar(1),
-    -> cus_areacode varchar(3) default '615' not null,
-    -> cus_phone varchar (8) not null,
-    -> cus_balance decimal (8,2) default 0.00,
-    -> check(cus_areacode in ('615, '713, '913')),
-    -> unique (cus_lname, cus_fname)
-    -> );
-ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'int,
-cus_lname varchar (15) not null,
-cus_fname varchar (15) not null,
-cus_initi' at line 2
-mysql> create table customer (
-    -> cus_code INT PRIMARY KEY,
-    -> cus_lname varchar (15) NOT NULL,
-    -> cus_fname varchar (15) NOT NULL,
-    -> cus_initial varchar(1),
-    -> cus_areacode varchar(3) default '615' NOT NULL,
-    -> cus_phone varchar (8) NOT NULL,
-    -> cus_balance decimal (8,2) default 0.00,
-    -> check(cus_areacode in ('615, '713, '913')),
-    -> unique (cus_lname, cus_fname)
-    -> );
-ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '713, '913')),
-unique (cus_lname, cus_fname)
-)' at line 9
-mysql> create table customer (
-    -> cus_code INT PRIMARY KEY,
-    -> cus_lname varchar (15) NOT NULL,
-    -> cus_fname varchar (15) NOT NULL,
-    -> cus_initial varchar(1),
-    -> cus_areacode varchar(3) default '615' NOT NULL,
-    -> cus_phone varchar (8) NOT NULL,
-    -> cus_balance decimal (8,2) default 0.00,
-    -> check(cus_areacode in ('615, '713, '913')),
-    -> UNIQUE(cus_lname, cus_fname)
-    -> );
-ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '713, '913')),
-UNIQUE(cus_lname, cus_fname)
-)' at line 9
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\\Deleted a large portion of error codes, I was missing the  "  '  " at the end of the area codes
 mysql> create table customer (
     -> cus_code INT PRIMARY KEY,
     -> cus_lname varchar (15) NOT NULL,
@@ -130,14 +62,7 @@ mysql> describe customer;
 +--------------+--------------+------+-----+---------+-------+
 7 rows in set (0.01 sec)
 
-mysql> describe cus_areacode
-    -> \c
-mysql> describe cus_areacode;
-ERROR 1146 (42S02): Table 'sales.cus_areacode' doesn't exist
-mysql> select cus_areacode;
-ERROR 1054 (42S22): Unknown column 'cus_areacode' in 'field list'
-mysql> use customer
-ERROR 1049 (42000): Unknown database 'customer'
+{
 mysql> select cus_areacode from customer;
 Empty set (0.01 sec)
 
@@ -149,7 +74,7 @@ mysql> select cus
     -> ^C
 mysql> select cus_areacode Areacode from customer;
 Empty set (0.00 sec)
-
+                                                    } \\ Tried to show data in these columns but there was no data to be shown
 mysql> describe customer;
 +--------------+--------------+------+-----+---------+-------+
 | Field        | Type         | Null | Key | Default | Extra |
@@ -189,14 +114,6 @@ mysql> describe customer
 8 rows in set (0.00 sec)
 
 mysql> create table vendor (
-    -> add v_code int,
-    -> ;
-ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'add v_code int,' at line 2
-mysql> create table vendor (
-    -> add v_code int
-    -> ;
-ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'add v_code int' at line 2
-mysql> create table vendor (
     -> v_code int,
     -> PRIMARY KEY (v_code)
     -> );
@@ -208,7 +125,7 @@ mysql> alter table customer
 ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 2
 mysql> alter table customer
     -> add FOREIGN KEY (v_code)
-    -> REFERENCES vendor (v_code)
+    -> REFERENCES vendor (v_code) \\ REQUIRES THIS LINE TO FUNCTION
     -> ;
 Query OK, 0 rows affected (0.20 sec)
 Records: 0  Duplicates: 0  Warnings: 0
@@ -228,8 +145,6 @@ mysql> describe customer;
 +--------------+--------------+------+-----+---------+-------+
 8 rows in set (0.00 sec)
 
-mysql> desvcribe vendor;
-ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'desvcribe vendor' at line 1
 mysql> describe vendor;
 +--------+---------+------+-----+---------+-------+
 | Field  | Type    | Null | Key | Default | Extra |
@@ -258,13 +173,13 @@ Query OK, 1 row affected (0.02 sec)
 mysql> inster into vendor values('1');
 ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'inster into vendor values('1')' at line 1
 mysql> insert into vendor values('1');
-ERROR 1062 (23000): Duplicate entry '1' for key 'PRIMARY'
+ERROR 1062 (23000): Duplicate entry '1' for key 'PRIMARY'   \\ The UNIQUE constraint returns this error when there are duplicates
 mysql> insert into vendor values('2');
 Query OK, 1 row affected (0.12 sec)
 
-mysql> select * vendor;
+mysql> select * vendor; 
 ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'vendor' at line 1
-mysql> select * from vendor;
+mysql> select * from vendor; \\ DONT FORGET THE "FROM" REQUIREMENT
 +--------+
 | v_code |
 +--------+
