@@ -1,0 +1,288 @@
+Enter password: ******
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 12
+Server version: 8.0.12 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2018, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> use sales
+Database changed
+mysql> create table customer (
+    -> ^C
+mysql> show tables;
+Empty set (0.00 sec)
+
+mysql> create table customer(
+    -> cus_code int primary key,
+    -> cus_lname varchar (15) not null,
+    -> cus_fname varchar (15) not null,
+    -> cus_initial varchar(1),
+    -> cus_areacode varchar(3) default '615' not null,
+    -> cus_phone varchar (8) not null,
+    -> cus_balance decimal (8,2) default 0.00,
+    -> check(cus_areacode in ('615, '713, '913)),
+    '> check(cus_areacode in ('615, '713, '913')),
+    '> ^C
+mysql> create table customer(
+    -> create table customer (
+    -> cus_code int primary key,
+    -> cus_lname varchar (15) not null,
+    -> cus_fname varchar (15) not null,
+    -> cus_initial varchar(1),
+    -> cus_areacode varchar(3) default '615' not null,
+    -> cus_phone varchar (8) not null,
+    -> cus_balance decimal (8,2) default 0.00,
+    -> check(cus_areacode in ('615, '713, '913')),
+    -> unique (cus_lname, cus_fname)
+    -> );
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'create table customer (
+cus_code int primary key,
+cus_lname varchar (15) not nul' at line 2
+mysql> create table customer (
+    -> primary key cus_code int,
+    -> cus_lname varchar (15) not null,
+    -> cus_fname varchar (15) not null,
+    -> cus_initial varchar(1),
+    -> cus_areacode varchar(3) default '615' not null,
+    -> cus_phone varchar (8) not null,
+    -> cus_balance decimal (8,2) default 0.00,
+    -> check(cus_areacode in ('615, '713, '913')),
+    -> unique (cus_lname, cus_fname)
+    -> );
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'int,
+cus_lname varchar (15) not null,
+cus_fname varchar (15) not null,
+cus_initi' at line 2
+mysql> create table customer (
+    -> cus_code INT PRIMARY KEY,
+    -> cus_lname varchar (15) NOT NULL,
+    -> cus_fname varchar (15) NOT NULL,
+    -> cus_initial varchar(1),
+    -> cus_areacode varchar(3) default '615' NOT NULL,
+    -> cus_phone varchar (8) NOT NULL,
+    -> cus_balance decimal (8,2) default 0.00,
+    -> check(cus_areacode in ('615, '713, '913')),
+    -> unique (cus_lname, cus_fname)
+    -> );
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '713, '913')),
+unique (cus_lname, cus_fname)
+)' at line 9
+mysql> create table customer (
+    -> cus_code INT PRIMARY KEY,
+    -> cus_lname varchar (15) NOT NULL,
+    -> cus_fname varchar (15) NOT NULL,
+    -> cus_initial varchar(1),
+    -> cus_areacode varchar(3) default '615' NOT NULL,
+    -> cus_phone varchar (8) NOT NULL,
+    -> cus_balance decimal (8,2) default 0.00,
+    -> check(cus_areacode in ('615, '713, '913')),
+    -> UNIQUE(cus_lname, cus_fname)
+    -> );
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '713, '913')),
+UNIQUE(cus_lname, cus_fname)
+)' at line 9
+mysql> create table customer (
+    -> cus_code INT PRIMARY KEY,
+    -> cus_lname varchar (15) NOT NULL,
+    -> cus_fname varchar (15) NOT NULL,
+    -> cus_initial varchar(1),
+    -> cus_areacode varchar(3) default '615' NOT NULL,
+    -> cus_phone varchar (8) NOT NULL,
+    -> cus_balance decimal (8,2) default 0.00,
+    -> check(cus_areacode IN ('615, '713, '913')),
+    -> UNIQUE(cus_lname, cus_fname)
+    -> );
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '713, '913')),
+UNIQUE(cus_lname, cus_fname)
+)' at line 9
+mysql> create table customer (
+    -> cus_code INT PRIMARY KEY,
+    -> cus_lname varchar (15) NOT NULL,
+    -> cus_fname varchar (15) NOT NULL,
+    -> cus_initial varchar(1),
+    -> cus_areacode varchar(3) default '615' NOT NULL,
+    -> cus_phone varchar (8) NOT NULL,
+    -> cus_balance decimal (8,2) default 0.00,
+    -> check(cus_areacode IN ('615', '713', '913')),
+    -> UNIQUE(cus_lname, cus_fname)
+    -> );
+Query OK, 0 rows affected (0.15 sec)
+
+mysql> describe table customer;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'table customer' at line 1
+mysql> describe customer;
++--------------+--------------+------+-----+---------+-------+
+| Field        | Type         | Null | Key | Default | Extra |
++--------------+--------------+------+-----+---------+-------+
+| cus_code     | int(11)      | NO   | PRI | NULL    |       |
+| cus_lname    | varchar(15)  | NO   | MUL | NULL    |       |
+| cus_fname    | varchar(15)  | NO   |     | NULL    |       |
+| cus_initial  | varchar(1)   | YES  |     | NULL    |       |
+| cus_areacode | varchar(3)   | NO   |     | 615     |       |
+| cus_phone    | varchar(8)   | NO   |     | NULL    |       |
+| cus_balance  | decimal(8,2) | YES  |     | 0.00    |       |
++--------------+--------------+------+-----+---------+-------+
+7 rows in set (0.01 sec)
+
+mysql> describe cus_areacode
+    -> \c
+mysql> describe cus_areacode;
+ERROR 1146 (42S02): Table 'sales.cus_areacode' doesn't exist
+mysql> select cus_areacode;
+ERROR 1054 (42S22): Unknown column 'cus_areacode' in 'field list'
+mysql> use customer
+ERROR 1049 (42000): Unknown database 'customer'
+mysql> select cus_areacode from customer;
+Empty set (0.01 sec)
+
+mysql> select * from customer
+    -> ;
+Empty set (0.00 sec)
+
+mysql> select cus
+    -> ^C
+mysql> select cus_areacode Areacode from customer;
+Empty set (0.00 sec)
+
+mysql> describe customer;
++--------------+--------------+------+-----+---------+-------+
+| Field        | Type         | Null | Key | Default | Extra |
++--------------+--------------+------+-----+---------+-------+
+| cus_code     | int(11)      | NO   | PRI | NULL    |       |
+| cus_lname    | varchar(15)  | NO   | MUL | NULL    |       |
+| cus_fname    | varchar(15)  | NO   |     | NULL    |       |
+| cus_initial  | varchar(1)   | YES  |     | NULL    |       |
+| cus_areacode | varchar(3)   | NO   |     | 615     |       |
+| cus_phone    | varchar(8)   | NO   |     | NULL    |       |
+| cus_balance  | decimal(8,2) | YES  |     | 0.00    |       |
++--------------+--------------+------+-----+---------+-------+
+7 rows in set (0.00 sec)
+
+mysql> alter table
+    -> add^C
+mysql> alter table customer
+    -> add v_code int
+    -> ;
+Query OK, 0 rows affected (0.09 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> describe customer
+    -> ;
++--------------+--------------+------+-----+---------+-------+
+| Field        | Type         | Null | Key | Default | Extra |
++--------------+--------------+------+-----+---------+-------+
+| cus_code     | int(11)      | NO   | PRI | NULL    |       |
+| cus_lname    | varchar(15)  | NO   | MUL | NULL    |       |
+| cus_fname    | varchar(15)  | NO   |     | NULL    |       |
+| cus_initial  | varchar(1)   | YES  |     | NULL    |       |
+| cus_areacode | varchar(3)   | NO   |     | 615     |       |
+| cus_phone    | varchar(8)   | NO   |     | NULL    |       |
+| cus_balance  | decimal(8,2) | YES  |     | 0.00    |       |
+| v_code       | int(11)      | YES  |     | NULL    |       |
++--------------+--------------+------+-----+---------+-------+
+8 rows in set (0.00 sec)
+
+mysql> create table vendor (
+    -> add v_code int,
+    -> ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'add v_code int,' at line 2
+mysql> create table vendor (
+    -> add v_code int
+    -> ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'add v_code int' at line 2
+mysql> create table vendor (
+    -> v_code int,
+    -> PRIMARY KEY (v_code)
+    -> );
+Query OK, 0 rows affected (0.09 sec)
+
+mysql> alter table customer
+    -> add FOREIGN KEY (v_code)
+    -> ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 2
+mysql> alter table customer
+    -> add FOREIGN KEY (v_code)
+    -> REFERENCES vendor (v_code)
+    -> ;
+Query OK, 0 rows affected (0.20 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> describe customer;
++--------------+--------------+------+-----+---------+-------+
+| Field        | Type         | Null | Key | Default | Extra |
++--------------+--------------+------+-----+---------+-------+
+| cus_code     | int(11)      | NO   | PRI | NULL    |       |
+| cus_lname    | varchar(15)  | NO   | MUL | NULL    |       |
+| cus_fname    | varchar(15)  | NO   |     | NULL    |       |
+| cus_initial  | varchar(1)   | YES  |     | NULL    |       |
+| cus_areacode | varchar(3)   | NO   |     | 615     |       |
+| cus_phone    | varchar(8)   | NO   |     | NULL    |       |
+| cus_balance  | decimal(8,2) | YES  |     | 0.00    |       |
+| v_code       | int(11)      | YES  | MUL | NULL    |       |
++--------------+--------------+------+-----+---------+-------+
+8 rows in set (0.00 sec)
+
+mysql> desvcribe vendor;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'desvcribe vendor' at line 1
+mysql> describe vendor;
++--------+---------+------+-----+---------+-------+
+| Field  | Type    | Null | Key | Default | Extra |
++--------+---------+------+-----+---------+-------+
+| v_code | int(11) | NO   | PRI | NULL    |       |
++--------+---------+------+-----+---------+-------+
+1 row in set (0.00 sec)
+
+mysql> alter table vendor
+    -> add UNIQUE (v_code)
+    -> ;
+Query OK, 0 rows affected (0.13 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> describe vendor;
++--------+---------+------+-----+---------+-------+
+| Field  | Type    | Null | Key | Default | Extra |
++--------+---------+------+-----+---------+-------+
+| v_code | int(11) | NO   | PRI | NULL    |       |
++--------+---------+------+-----+---------+-------+
+1 row in set (0.00 sec)
+
+mysql> insert into vendor values('1');
+Query OK, 1 row affected (0.02 sec)
+
+mysql> inster into vendor values('1');
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'inster into vendor values('1')' at line 1
+mysql> insert into vendor values('1');
+ERROR 1062 (23000): Duplicate entry '1' for key 'PRIMARY'
+mysql> insert into vendor values('2');
+Query OK, 1 row affected (0.12 sec)
+
+mysql> select * vendor;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'vendor' at line 1
+mysql> select * from vendor;
++--------+
+| v_code |
++--------+
+|      1 |
+|      2 |
++--------+
+2 rows in set (0.00 sec)
+
+mysql> insert into customer values( '12345','John','Koons','K','','4143883348','0','2');
+ERROR 1406 (22001): Data too long for column 'cus_phone' at row 1
+mysql> insert into customer values( '12345','John','Koons','K','','43883348','0','2');
+Query OK, 1 row affected (0.11 sec)
+
+mysql> select * from customer
+    -> ;
++----------+-----------+-----------+-------------+--------------+-----------+-------------+--------+
+| cus_code | cus_lname | cus_fname | cus_initial | cus_areacode | cus_phone | cus_balance | v_code |
++----------+-----------+-----------+-------------+--------------+-----------+-------------+--------+
+|    12345 | John      | Koons     | K           |              | 43883348  |        0.00 |      2 |
++----------+-----------+-----------+-------------+--------------+-----------+-------------+--------+
+1 row in set (0.00 sec)
