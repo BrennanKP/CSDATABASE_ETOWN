@@ -1,0 +1,24 @@
+create table customer (                                 \\ Creates the table "Customer"
+cus_code INT PRIMARY KEY,                               \\ Creates the cus_code as an INT which is the PRIMARY KEY to this table
+cus_lname varchar (15) NOT NULL,                        \\ Creates the attribute cus_lname that cannot have a "NULL" value
+cus_fname varchar (15) NOT NULL,                        \\ Creates the attribute cus_fname that cannot have a "NULL" value
+cus_initial varchar(1),                                 
+cus_areacode varchar(3) default '615' NOT NULL,         \\ Creates the areacode att. that has a default value of "615" 
+cus_phone varchar (8) NOT NULL,
+cus_balance decimal (8,2) default 0.00,
+check(cus_areacode IN ('615', '713', '913')),
+UNIQUE(cus_lname, cus_fname)                            \\ Defines the cus_lname & cus_fname as unique variables 
+);
+DESIRED RESULT
++--------------+--------------+------+-----+---------+-------+
+| Field        | Type         | Null | Key | Default | Extra |
++--------------+--------------+------+-----+---------+-------+
+| cus_code     | int(11)      | NO   | PRI | NULL    |       |
+| cus_lname    | varchar(15)  | NO   | MUL | NULL    |       |
+| cus_fname    | varchar(15)  | NO   |     | NULL    |       |
+| cus_initial  | varchar(1)   | YES  |     | NULL    |       |
+| cus_areacode | varchar(3)   | NO   |     | 615     |       |
+| cus_phone    | varchar(8)   | NO   |     | NULL    |       |
+| cus_balance  | decimal(8,2) | YES  |     | 0.00    |       |
++--------------+--------------+------+-----+---------+-------+
+7 rows in set (0.00 sec)
