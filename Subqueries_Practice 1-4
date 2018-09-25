@@ -1,0 +1,563 @@
+Enter password: ******
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 8
+Server version: 8.0.12 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2018, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> show databases
+    -> ;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| sakila             |
+| sys                |
+| world              |
++--------------------+
+6 rows in set (0.05 sec)
+
+mysql> create sales;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'sales' at line 1
+mysql> create database sales
+    -> ;
+Query OK, 1 row affected (0.13 sec)
+
+mysql> use sales;
+Database changed
+mysql> source applications\Homedirs\Faculty & Staff Alphabetical\G\Gut\Public\2018\Fall\CS309A\sale_data.sql
+ERROR:
+Failed to open file 'applications\Homedirs\Faculty & Staff Alphabetical\G\Gut\Public\2018\Fall\CS309A\sale_data.sql', error: 2
+mysql> source C:\Users\praseutb\Documents\sale_data.sql
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected, 1 warning (0.01 sec)
+
+Query OK, 0 rows affected, 1 warning (0.00 sec)
+
+Query OK, 0 rows affected, 1 warning (0.00 sec)
+
+Query OK, 0 rows affected, 1 warning (0.00 sec)
+
+Query OK, 0 rows affected, 1 warning (0.00 sec)
+
+Query OK, 0 rows affected, 1 warning (0.00 sec)
+
+Query OK, 0 rows affected, 1 warning (0.00 sec)
+
+Query OK, 0 rows affected, 1 warning (0.00 sec)
+
+Query OK, 0 rows affected, 1 warning (0.00 sec)
+
+Query OK, 0 rows affected (0.07 sec)
+
+Query OK, 0 rows affected (0.05 sec)
+
+Query OK, 0 rows affected (0.05 sec)
+
+Query OK, 0 rows affected (0.06 sec)
+
+Query OK, 0 rows affected (0.06 sec)
+
+Query OK, 0 rows affected (0.06 sec)
+
+Query OK, 0 rows affected (0.09 sec)
+
+Query OK, 0 rows affected (0.06 sec)
+
+Query OK, 0 rows affected (0.05 sec)
+
+Query OK, 1 row affected (0.02 sec)
+
+Query OK, 1 row affected (0.01 sec)
+
+Query OK, 1 row affected (0.01 sec)
+
+Query OK, 1 row affected (0.01 sec)
+
+Query OK, 1 row affected (0.01 sec)
+
+Query OK, 1 row affected (0.01 sec)
+
+Query OK, 1 row affected (0.01 sec)
+
+Query OK, 1 row affected (0.02 sec)
+
+Query OK, 1 row affected (0.01 sec)
+
+Query OK, 1 row affected (0.01 sec)
+
+Query OK, 1 row affected (0.01 sec)
+
+Query OK, 1 row affected (0.04 sec)
+
+Query OK, 1 row affected (0.01 sec)
+
+Query OK, 1 row affected (0.01 sec)
+
+Query OK, 1 row affected (0.01 sec)
+
+Query OK, 1 row affected (0.01 sec)
+
+Query OK, 1 row affected (0.01 sec)
+
+Query OK, 1 row affected (0.01 sec)
+
+Query OK, 1 row affected (0.01 sec)
+
+Query OK, 1 row affected (0.01 sec)
+
+Query OK, 1 row affected (0.01 sec)
+
+Query OK, 1 row affected (0.01 sec)
+
+Query OK, 1 row affected (0.01 sec)
+
+Query OK, 1 row affected (0.01 sec)
+
+Query OK, 1 row affected (0.01 sec)
+
+Query OK, 1 row affected (0.01 sec)
+
+Query OK, 1 row affected (0.01 sec)
+
+Query OK, 11 rows affected (0.01 sec)
+Records: 11  Duplicates: 0  Warnings: 0
+
+Query OK, 16 rows affected (0.01 sec)
+Records: 16  Duplicates: 0  Warnings: 0
+
+Query OK, 1 row affected (0.01 sec)
+
+Query OK, 1 row affected (0.01 sec)
+
+Query OK, 1 row affected (0.01 sec)
+
+Query OK, 1 row affected (0.01 sec)
+
+Query OK, 1 row affected (0.01 sec)
+
+Query OK, 1 row affected (0.01 sec)
+
+Query OK, 1 row affected (0.01 sec)
+
+Query OK, 1 row affected (0.01 sec)
+
+Query OK, 1 row affected (0.04 sec)
+
+Query OK, 1 row affected (0.07 sec)
+
+Query OK, 1 row affected (0.01 sec)
+
+Query OK, 1 row affected (0.01 sec)
+
+Query OK, 1 row affected (0.01 sec)
+
+Query OK, 1 row affected (0.01 sec)
+
+Query OK, 1 row affected (0.01 sec)
+
+Query OK, 1 row affected (0.01 sec)
+
+Query OK, 1 row affected (0.01 sec)
+
+Query OK, 1 row affected (0.01 sec)
+
+Query OK, 1 row affected (0.01 sec)
+
+Query OK, 1 row affected (0.01 sec)
+
+Query OK, 1 row affected (0.01 sec)
+
+Query OK, 1 row affected (0.01 sec)
+
+Query OK, 1 row affected (0.01 sec)
+
+Query OK, 1 row affected (0.01 sec)
+
+Query OK, 1 row affected (0.01 sec)
+
+Query OK, 1 row affected (0.01 sec)
+
+Query OK, 1 row affected (0.01 sec)
+
+Query OK, 1 row affected (0.01 sec)
+
+Query OK, 1 row affected (0.01 sec)
+
+Query OK, 1 row affected (0.01 sec)
+
+Query OK, 1 row affected (0.01 sec)
+
+Query OK, 1 row affected (0.01 sec)
+
+Query OK, 1 row affected (0.01 sec)
+
+Query OK, 1 row affected (0.01 sec)
+
+Query OK, 1 row affected (0.01 sec)
+
+Query OK, 1 row affected (0.01 sec)
+
+Query OK, 1 row affected (0.01 sec)
+
+Query OK, 1 row affected (0.01 sec)
+
+Query OK, 1 row affected (0.01 sec)
+
+Query OK, 1 row affected (0.01 sec)
+
+Query OK, 1 row affected (0.01 sec)
+
+Query OK, 1 row affected (0.01 sec)
+
+Query OK, 1 row affected (0.01 sec)
+
+Query OK, 1 row affected (0.01 sec)
+
+Query OK, 1 row affected (0.01 sec)
+
+Query OK, 1 row affected (0.01 sec)
+
+Query OK, 1 row affected (0.01 sec)
+
+Query OK, 1 row affected (0.01 sec)
+
+Query OK, 1 row affected (0.01 sec)
+
+Query OK, 1 row affected (0.01 sec)
+
+Query OK, 1 row affected (0.01 sec)
+
+Query OK, 1 row affected (0.01 sec)
+
+Query OK, 1 row affected (0.01 sec)
+
+Query OK, 1 row affected (0.01 sec)
+
+Query OK, 1 row affected (0.01 sec)
+
+Query OK, 1 row affected (0.01 sec)
+
+Query OK, 1 row affected (0.01 sec)
+
+Query OK, 1 row affected (0.01 sec)
+
+Query OK, 1 row affected (0.01 sec)
+
+Query OK, 1 row affected (0.01 sec)
+
+Query OK, 1 row affected (0.01 sec)
+
+Query OK, 1 row affected (0.01 sec)
+
+Query OK, 1 row affected (0.01 sec)
+
+Query OK, 1 row affected (0.01 sec)
+
+Query OK, 1 row affected (0.01 sec)
+
+Query OK, 1 row affected (0.01 sec)
+
+Query OK, 1 row affected (0.01 sec)
+
+Query OK, 1 row affected (0.01 sec)
+
+Query OK, 1 row affected (0.01 sec)
+
+Query OK, 1 row affected (0.01 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> show tables
+    -> ;
++-----------------+
+| Tables_in_sales |
++-----------------+
+| customer        |
+| emp             |
+| employee        |
+| invoice         |
+| line            |
+| p               |
+| product         |
+| v               |
+| vendor          |
++-----------------+
+9 rows in set (0.02 sec)
+
+mysql>  select vendor
+    -> ^C
+mysql> select * from vendor
+    -> ;
++--------+-----------------+-----------+------------+----------+---------+---------+
+| V_CODE | V_NAME          | V_CONTACT | V_AREACODE | V_PHONE  | V_STATE | V_ORDER |
++--------+-----------------+-----------+------------+----------+---------+---------+
+|  21225 | Bryson, Inc.    | Smithson  | 615        | 223-3234 | TN      | Y       |
+|  21226 | SuperLoo, Inc.  | Flushing  | 904        | 215-8995 | FL      | N       |
+|  21231 | D&E Supply      | Singh     | 615        | 228-3245 | TN      | Y       |
+|  21344 | Gomez Bros.     | Ortega    | 615        | 889-2546 | KY      | N       |
+|  22567 | Dome Supply     | Smith     | 901        | 678-1419 | GA      | N       |
+|  23119 | Randsets Ltd.   | Anderson  | 901        | 678-3998 | GA      | Y       |
+|  24004 | Brackman Bros.  | Browning  | 615        | 228-1410 | TN      | N       |
+|  24288 | ORDVA, Inc.     | Hakford   | 615        | 898-1234 | TN      | Y       |
+|  25443 | B&K, Inc.       | Smith     | 904        | 227-0093 | FL      | N       |
+|  25501 | Damal Supplies  | Smythe    | 615        | 890-3529 | TN      | N       |
+|  25595 | Rubicon Systems | Orton     | 904        | 456-0092 | FL      | Y       |
++--------+-----------------+-----------+------------+----------+---------+---------+
+11 rows in set (0.01 sec)
+
+mysql> select v_name, v_contact, v_phone where v_areacode = 615 and v_order = 'Y';
+ERROR 1054 (42S22): Unknown column 'v_name' in 'field list'
+mysql> select v_name, v_contact, v_phone from vendor where v_areacode = 615 and v_order = 'Y';
++--------------+-----------+----------+
+| v_name       | v_contact | v_phone  |
++--------------+-----------+----------+
+| Bryson, Inc. | Smithson  | 223-3234 |
+| D&E Supply   | Singh     | 228-3245 |
+| ORDVA, Inc.  | Hakford   | 898-1234 |
++--------------+-----------+----------+
+3 rows in set (0.01 sec)
+
+mysql> select * customer;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'customer' at line 1
+mysql> select * from customer;
++----------+-----------+-----------+-------------+--------------+-----------+-------------+
+| CUS_CODE | CUS_LNAME | CUS_FNAME | CUS_INITIAL | CUS_AREACODE | CUS_PHONE | CUS_BALANCE |
++----------+-----------+-----------+-------------+--------------+-----------+-------------+
+|    10010 | Ramas     | Alfred    | A           | 615          | 844-2573  |        0.00 |
+|    10011 | Dunne     | Leona     | K           | 713          | 894-1238  |        0.00 |
+|    10012 | Smith     | Kathy     | W           | 615          | 894-2285  |      345.86 |
+|    10013 | Olowski   | Paul      | F           | 615          | 894-2180  |      536.75 |
+|    10014 | Orlando   | Myron     | NULL        | 615          | 222-1672  |        0.00 |
+|    10015 | O'Brian   | Amy       | B           | 713          | 442-3381  |        0.00 |
+|    10016 | Brown     | James     | G           | 615          | 297-1228  |      221.19 |
+|    10017 | Williams  | George    | NULL        | 615          | 290-2556  |      768.93 |
+|    10018 | Farriss   | Anne      | G           | 713          | 382-7185  |      216.55 |
+|    10019 | Smith     | Olette    | K           | 615          | 297-3809  |        0.00 |
++----------+-----------+-----------+-------------+--------------+-----------+-------------+
+10 rows in set (0.00 sec)
+
+mysql> select cus_lname, cus_fname, cus_initial from customer where cus_areacode = 615 or cus_balance = 0;
++-----------+-----------+-------------+
+| cus_lname | cus_fname | cus_initial |
++-----------+-----------+-------------+
+| Ramas     | Alfred    | A           |
+| Dunne     | Leona     | K           |
+| Smith     | Kathy     | W           |
+| Olowski   | Paul      | F           |
+| Orlando   | Myron     | NULL        |
+| O'Brian   | Amy       | B           |
+| Brown     | James     | G           |
+| Williams  | George    | NULL        |
+| Smith     | Olette    | K           |
++-----------+-----------+-------------+
+9 rows in set (0.00 sec)
+
+mysql> select * from product;
++----------+-------------------------------------+---------------------+-------+-------+---------+------------+--------+
+| P_CODE   | P_DESCRIPT                          | P_INDATE            | P_QOH | P_MIN | P_PRICE | P_DISCOUNT | V_CODE |
++----------+-------------------------------------+---------------------+-------+-------+---------+------------+--------+
+| 11QER/31 | Power painter, 15 psi., 3-nozzle    | 2017-11-03 00:00:00 |     8 |     5 |  109.99 |       0.00 |  25595 |
+| 13-Q2/P2 | 7.25-in. pwr. saw blade             | 2017-12-13 00:00:00 |    32 |    15 |   14.99 |       0.05 |  21344 |
+| 14-Q1/L3 | 9.00-in. pwr. saw blade             | 2017-11-13 00:00:00 |    18 |    12 |   17.49 |       0.00 |  21344 |
+| 1546-QQ2 | Hrd. cloth, 1/4-in., 2x50           | 2018-01-15 00:00:00 |    15 |     8 |   39.95 |       0.00 |  23119 |
+| 1558-QW1 | Hrd. cloth, 1/2-in., 3x50           | 2018-01-15 00:00:00 |    23 |     5 |   43.99 |       0.00 |  23119 |
+| 2232/QTY | B&D jigsaw, 12-in. blade            | 2017-12-30 00:00:00 |     8 |     5 |  109.92 |       0.05 |  24288 |
+| 2232/QWE | B&D jigsaw, 8-in. blade             | 2017-12-24 00:00:00 |     6 |     5 |   99.87 |       0.05 |  24288 |
+| 2238/QPD | B&D cordless drill, 1/2-in.         | 2018-01-20 00:00:00 |    12 |     5 |   38.95 |       0.05 |  25595 |
+| 23109-HB | Claw hammer                         | 2018-01-20 00:00:00 |    23 |    10 |    9.95 |       0.10 |  21225 |
+| 23114-AA | Sledge hammer, 12 lb.               | 2018-01-02 00:00:00 |     8 |     5 |   14.40 |       0.05 |   NULL |
+| 54778-2T | Rat-tail file, 1/8-in. fine         | 2018-12-15 00:00:00 |    43 |    20 |    4.99 |       0.00 |  21344 |
+| 89-WRE-Q | Hicut chain saw, 16 in.             | 2018-02-07 00:00:00 |    11 |     5 |  256.99 |       0.05 |  24288 |
+| PVC23DRT | PVC pipe, 3.5-in., 8-ft             | 2018-02-20 00:00:00 |   188 |    75 |    5.87 |       0.00 |   NULL |
+| SM-18277 | 1.25-in. metal screw, 25            | 2018-03-01 00:00:00 |   172 |    75 |    6.99 |       0.00 |  21225 |
+| SW-23116 | 2.5-in. wd. screw, 50               | 2018-02-24 00:00:00 |   237 |   100 |    8.45 |       0.00 |  21231 |
+| WR3/TT3  | Steel matting, 4'x8'x1/6", .5" mesh | 2018-01-17 00:00:00 |    18 |     5 |  119.95 |       0.10 |  25595 |
++----------+-------------------------------------+---------------------+-------+-------+---------+------------+--------+
+16 rows in set (0.00 sec)
+
+mysql> select * from product where (p_qoh >= p_min + 50) or (p_discount > 0 and p_indate < '2016-01-01' );
++----------+--------------------------+---------------------+-------+-------+---------+------------+--------+
+| P_CODE   | P_DESCRIPT               | P_INDATE            | P_QOH | P_MIN | P_PRICE | P_DISCOUNT | V_CODE |
++----------+--------------------------+---------------------+-------+-------+---------+------------+--------+
+| PVC23DRT | PVC pipe, 3.5-in., 8-ft  | 2018-02-20 00:00:00 |   188 |    75 |    5.87 |       0.00 |   NULL |
+| SM-18277 | 1.25-in. metal screw, 25 | 2018-03-01 00:00:00 |   172 |    75 |    6.99 |       0.00 |  21225 |
+| SW-23116 | 2.5-in. wd. screw, 50    | 2018-02-24 00:00:00 |   237 |   100 |    8.45 |       0.00 |  21231 |
++----------+--------------------------+---------------------+-------+-------+---------+------------+--------+
+3 rows in set (0.01 sec)
+
+mysql> select * from customer where cus_lname = 'O%';
+Empty set (0.00 sec)
+
+mysql> select * from customer;
++----------+-----------+-----------+-------------+--------------+-----------+-------------+
+| CUS_CODE | CUS_LNAME | CUS_FNAME | CUS_INITIAL | CUS_AREACODE | CUS_PHONE | CUS_BALANCE |
++----------+-----------+-----------+-------------+--------------+-----------+-------------+
+|    10010 | Ramas     | Alfred    | A           | 615          | 844-2573  |        0.00 |
+|    10011 | Dunne     | Leona     | K           | 713          | 894-1238  |        0.00 |
+|    10012 | Smith     | Kathy     | W           | 615          | 894-2285  |      345.86 |
+|    10013 | Olowski   | Paul      | F           | 615          | 894-2180  |      536.75 |
+|    10014 | Orlando   | Myron     | NULL        | 615          | 222-1672  |        0.00 |
+|    10015 | O'Brian   | Amy       | B           | 713          | 442-3381  |        0.00 |
+|    10016 | Brown     | James     | G           | 615          | 297-1228  |      221.19 |
+|    10017 | Williams  | George    | NULL        | 615          | 290-2556  |      768.93 |
+|    10018 | Farriss   | Anne      | G           | 713          | 382-7185  |      216.55 |
+|    10019 | Smith     | Olette    | K           | 615          | 297-3809  |        0.00 |
++----------+-----------+-----------+-------------+--------------+-----------+-------------+
+10 rows in set (0.00 sec)
+
+mysql> select * from customer where cus_lname like 'O%';
++----------+-----------+-----------+-------------+--------------+-----------+-------------+
+| CUS_CODE | CUS_LNAME | CUS_FNAME | CUS_INITIAL | CUS_AREACODE | CUS_PHONE | CUS_BALANCE |
++----------+-----------+-----------+-------------+--------------+-----------+-------------+
+|    10015 | O'Brian   | Amy       | B           | 713          | 442-3381  |        0.00 |
+|    10013 | Olowski   | Paul      | F           | 615          | 894-2180  |      536.75 |
+|    10014 | Orlando   | Myron     | NULL        | 615          | 222-1672  |        0.00 |
++----------+-----------+-----------+-------------+--------------+-----------+-------------+
+3 rows in set (0.01 sec)
+
+mysql> select * from product where p_descript like '%saw%';
++----------+--------------------------+---------------------+-------+-------+---------+------------+--------+
+| P_CODE   | P_DESCRIPT               | P_INDATE            | P_QOH | P_MIN | P_PRICE | P_DISCOUNT | V_CODE |
++----------+--------------------------+---------------------+-------+-------+---------+------------+--------+
+| 13-Q2/P2 | 7.25-in. pwr. saw blade  | 2017-12-13 00:00:00 |    32 |    15 |   14.99 |       0.05 |  21344 |
+| 14-Q1/L3 | 9.00-in. pwr. saw blade  | 2017-11-13 00:00:00 |    18 |    12 |   17.49 |       0.00 |  21344 |
+| 2232/QTY | B&D jigsaw, 12-in. blade | 2017-12-30 00:00:00 |     8 |     5 |  109.92 |       0.05 |  24288 |
+| 2232/QWE | B&D jigsaw, 8-in. blade  | 2017-12-24 00:00:00 |     6 |     5 |   99.87 |       0.05 |  24288 |
+| 89-WRE-Q | Hicut chain saw, 16 in.  | 2018-02-07 00:00:00 |    11 |     5 |  256.99 |       0.05 |  24288 |
++----------+--------------------------+---------------------+-------+-------+---------+------------+--------+
+5 rows in set (0.00 sec)
+
+mysql> select * from vendor where v_contact like 'Ort_n';
++--------+-----------------+-----------+------------+----------+---------+---------+
+| V_CODE | V_NAME          | V_CONTACT | V_AREACODE | V_PHONE  | V_STATE | V_ORDER |
++--------+-----------------+-----------+------------+----------+---------+---------+
+|  25595 | Rubicon Systems | Orton     | 904        | 456-0092 | FL      | Y       |
++--------+-----------------+-----------+------------+----------+---------+---------+
+1 row in set (0.00 sec)
+
+mysql> select * customer;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'customer' at line 1
+mysql> select * from customer;
++----------+-----------+-----------+-------------+--------------+-----------+-------------+
+| CUS_CODE | CUS_LNAME | CUS_FNAME | CUS_INITIAL | CUS_AREACODE | CUS_PHONE | CUS_BALANCE |
++----------+-----------+-----------+-------------+--------------+-----------+-------------+
+|    10010 | Ramas     | Alfred    | A           | 615          | 844-2573  |        0.00 |
+|    10011 | Dunne     | Leona     | K           | 713          | 894-1238  |        0.00 |
+|    10012 | Smith     | Kathy     | W           | 615          | 894-2285  |      345.86 |
+|    10013 | Olowski   | Paul      | F           | 615          | 894-2180  |      536.75 |
+|    10014 | Orlando   | Myron     | NULL        | 615          | 222-1672  |        0.00 |
+|    10015 | O'Brian   | Amy       | B           | 713          | 442-3381  |        0.00 |
+|    10016 | Brown     | James     | G           | 615          | 297-1228  |      221.19 |
+|    10017 | Williams  | George    | NULL        | 615          | 290-2556  |      768.93 |
+|    10018 | Farriss   | Anne      | G           | 713          | 382-7185  |      216.55 |
+|    10019 | Smith     | Olette    | K           | 615          | 297-3809  |        0.00 |
++----------+-----------+-----------+-------------+--------------+-----------+-------------+
+10 rows in set (0.00 sec)
+
+mysql> show tables
+    -> ;
++-----------------+
+| Tables_in_sales |
++-----------------+
+| customer        |
+| emp             |
+| employee        |
+| invoice         |
+| line            |
+| p               |
+| product         |
+| v               |
+| vendor          |
++-----------------+
+9 rows in set (0.00 sec)
+
+mysql> select * from invoice;
++------------+----------+---------------------+
+| INV_NUMBER | CUS_CODE | INV_DATE            |
++------------+----------+---------------------+
+|       1001 |    10014 | 2018-05-16 00:00:00 |
+|       1002 |    10011 | 2018-04-16 00:00:00 |
+|       1003 |    10012 | 2018-03-16 00:00:00 |
+|       1004 |    10011 | 2018-01-17 00:00:00 |
+|       1005 |    10018 | 2018-07-17 00:00:00 |
+|       1006 |    10014 | 2018-08-17 00:00:00 |
+|       1007 |    10015 | 2018-09-17 00:00:00 |
+|       1008 |    10011 | 2018-00-17 00:00:00 |
++------------+----------+---------------------+
+8 rows in set (0.00 sec)
+
+mysql> select cus_lname, cus_fname, c_initial from customer where cus_code in (select cus_code in invoice);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'invoice)' at line 1
+mysql> select cus_lname, cus_fname, c_initial from customer where cus_code in (select cus_code from invoice);
+ERROR 1054 (42S22): Unknown column 'c_initial' in 'field list'
+mysql> select cus_lname, cus_fname, cus_initial from customer where cus_code in (select cus_code from invoice);
++-----------+-----------+-------------+
+| cus_lname | cus_fname | cus_initial |
++-----------+-----------+-------------+
+| Dunne     | Leona     | K           |
+| Smith     | Kathy     | W           |
+| Orlando   | Myron     | NULL        |
+| O'Brian   | Amy       | B           |
+| Farriss   | Anne      | G           |
++-----------+-----------+-------------+
+5 rows in set (0.00 sec)
+
+mysql> select inv_date from invoice order by inv_date desc;
++---------------------+
+| inv_date            |
++---------------------+
+| 2018-09-17 00:00:00 |
+| 2018-08-17 00:00:00 |
+| 2018-07-17 00:00:00 |
+| 2018-05-16 00:00:00 |
+| 2018-04-16 00:00:00 |
+| 2018-03-16 00:00:00 |
+| 2018-01-17 00:00:00 |
+| 2018-00-17 00:00:00 |
++---------------------+
+8 rows in set (0.00 sec)
+
+mysql> select p_descript, v_code, in_date, p_price from product where (in_date > '2016-01-01' and p_price <= 50) order by v_code (order by p_price desc);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'order by p_price desc)' at line 1
+mysql> select p_descript, v_code, in_date, p_price from product where (in_date > '2016-01-01' and p_price <= 50) order by v_code , order by p_price desc;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'order by p_price desc' at line 1
+mysql> select p_descript, v_code, in_date, p_price from product where (in_date > '2016-01-01' and p_price <= 50) order by v_code ,  p_price desc;
+ERROR 1054 (42S22): Unknown column 'in_date' in 'field list'
+mysql> select p_descript, v_code, p_indate, p_price from product where (in_date > '2016-01-01' and p_price <= 50) order by v_code ,  p_price desc;
+ERROR 1054 (42S22): Unknown column 'in_date' in 'where clause'
+mysql> select p_descript, v_code, p_indate, p_price from product where (p_indate > '2018-01-01' and p_price <= 50) order by v_code ,  p_price desc;
++-----------------------------+--------+---------------------+---------+
+| p_descript                  | v_code | p_indate            | p_price |
++-----------------------------+--------+---------------------+---------+
+| Sledge hammer, 12 lb.       |   NULL | 2018-01-02 00:00:00 |   14.40 |
+| PVC pipe, 3.5-in., 8-ft     |   NULL | 2018-02-20 00:00:00 |    5.87 |
+| Claw hammer                 |  21225 | 2018-01-20 00:00:00 |    9.95 |
+| 1.25-in. metal screw, 25    |  21225 | 2018-03-01 00:00:00 |    6.99 |
+| 2.5-in. wd. screw, 50       |  21231 | 2018-02-24 00:00:00 |    8.45 |
+| Rat-tail file, 1/8-in. fine |  21344 | 2018-12-15 00:00:00 |    4.99 |
+| Hrd. cloth, 1/2-in., 3x50   |  23119 | 2018-01-15 00:00:00 |   43.99 |
+| Hrd. cloth, 1/4-in., 2x50   |  23119 | 2018-01-15 00:00:00 |   39.95 |
+| B&D cordless drill, 1/2-in. |  25595 | 2018-01-20 00:00:00 |   38.95 |
++-----------------------------+--------+---------------------+---------+
+9 rows in set (0.00 sec)
+
+mysql> select p_descript, v_code, p_indate, p_price from product where (p_indate < '2018-01-01' and p_price <= 50) order by v_code ,  p_price desc;
++-------------------------+--------+---------------------+---------+
+| p_descript              | v_code | p_indate            | p_price |
++-------------------------+--------+---------------------+---------+
+| 9.00-in. pwr. saw blade |  21344 | 2017-11-13 00:00:00 |   17.49 |
+| 7.25-in. pwr. saw blade |  21344 | 2017-12-13 00:00:00 |   14.99 |
++-------------------------+--------+---------------------+---------+
+2 rows in set (0.00 sec)
+
+mysql>
