@@ -1,2 +1,3 @@
 # CSDATABASE_ETOWN
 ETOWN DATABASE CLASSES
+Using MySQL command line as primary IDE
